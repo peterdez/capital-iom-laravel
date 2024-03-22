@@ -23,11 +23,11 @@
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
-        <div>
+        <!--div>
             <x-input-label for="gender" :value="__('Gender')" />
             <x-text-input id="gender" name="gender" type="text" class="mt-1 block w-full" :value="old('gender', $user->gender)" required autofocus autocomplete="gender" />
             <x-input-error class="mt-2" :messages="$errors->get('gender')" />
-        </div>
+        </div-->
 
         <div>
             <x-input-label for="mobile_no" :value="__('Mobile')" />
