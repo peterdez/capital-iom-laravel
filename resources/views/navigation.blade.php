@@ -16,11 +16,22 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Company</a>
         </li>
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+            @else
         <li class="nav-item">
-          <a class="nav-link text-gold" href="#">Login</a>
+          <a class="nav-link text-gold" href="{{ route('login') }}"">Login</a>
         </li>
+             @if (Route::has('register'))
         <li class="nav-item">
-          <a class="btn btn-primary rounded-pill" href="#">Login</a>
+          <a class="nav-link text-gold" href="{{ route('register') }}"">Register</a>
+        </li>
+              @endif
+             @endauth  
+         @endif
+        <li class="nav-item">
+          <a class="btn btn-primary rounded-pill" href="#">Get started</a>
         </li>
       </ul>
       <!--form class="d-flex" role="search">

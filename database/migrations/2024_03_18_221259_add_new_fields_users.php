@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('gender')->default(0);
             $table->string('mobile_no')->nullable();
         });
     }
@@ -23,7 +22,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('gender');
             $table->dropColumn('mobile_no');
         });
     }

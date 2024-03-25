@@ -23,12 +23,6 @@
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
-        <!--div>
-            <x-input-label for="gender" :value="__('Gender')" />
-            <x-text-input id="gender" name="gender" type="text" class="mt-1 block w-full" :value="old('gender', $user->gender)" required autofocus autocomplete="gender" />
-            <x-input-error class="mt-2" :messages="$errors->get('gender')" />
-        </div-->
-
         <div>
             <x-input-label for="mobile_no" :value="__('Mobile')" />
             <x-text-input id="mobile_no" name="mobile_no" type="text" class="mt-1 block w-full" :value="old('mobile_no', $user->mobile_no)" required autofocus autocomplete="mobile_no" />
